@@ -30,39 +30,14 @@ public class SplashActivity extends AppCompatActivity {
         txtDivisionBangladesh=findViewById(R.id.txt_division_bamgladesh);
         imgIcon=findViewById(R.id.img_icon);
 
-        txtDivisionBangladesh.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Animation rotate= AnimationUtils.loadAnimation(SplashActivity.this,R.anim.rotate);
-                txtDivisionBangladesh.startAnimation(rotate);
-            }
-        });
-
-        txtDivisionBangladesh.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                txtDivisionBangladesh.clearAnimation();
-                return true;
-            }
-        });
 
 
+       //auto rotate start
+        Animation rotate= AnimationUtils.loadAnimation(SplashActivity.this,R.anim.rotate);
+        txtDivisionBangladesh.startAnimation(rotate);
 
-        imgIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Animation rotate= AnimationUtils.loadAnimation(SplashActivity.this,R.anim.rotate);
-                imgIcon.startAnimation(rotate);
-            }
-        });
+        imgIcon.startAnimation(rotate);
 
-        imgIcon.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                imgIcon.clearAnimation();
-                return true;
-            }
-        });
 
 
 
